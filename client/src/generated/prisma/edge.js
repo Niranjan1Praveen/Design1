@@ -162,7 +162,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\nithi\\Desktop\\LandingPageDesigns\\Design1\\client\\src\\generated\\prisma",
+      "value": "/Users/serb9/Desktop/Design1/client/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -171,12 +171,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "darwin",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\nithi\\Desktop\\LandingPageDesigns\\Design1\\client\\prisma\\schema.prisma",
+    "sourceFilePath": "/Users/serb9/Desktop/Design1/client/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

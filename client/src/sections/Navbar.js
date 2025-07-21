@@ -19,13 +19,21 @@ import React from "react";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import { navMenu } from "@/constants";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 
 function Navbar(props) {
   return (
     <div>
       <header className="h-16 md:h-20 lg:h-24 grid grid-cols-1 items-center">
         <div className="container flex items-center justify-between ">
-          <Logo variant={"default"}/>
+          <Logo variant={"default"} />
           <NavigationMenu className={"max-lg:hidden mx-auto"}>
             <NavigationMenuList>
               {navMenu.map(({ href, label, submenu }, index) => (
@@ -72,10 +80,16 @@ function Navbar(props) {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="flex items-center gap-2 justify-end max-lg:hidden">
+          <div className="flex items-center gap-4 justify-end max-lg:hidden">
             <ToggleTheme />
-            <Button variant={"ghost"}>Sign In</Button>
-            <Button>Free Trial</Button>
+            <SignedOut>
+              <SignInButton />
+              <SignUpButton>
+                <Button>
+                  Free Trial
+                </Button>
+              </SignUpButton>
+            </SignedOut>
           </div>
           <Popover>
             <PopoverTrigger asChild>
